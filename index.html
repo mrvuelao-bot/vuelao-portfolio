@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic img slide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/iamges 4.jpeg" alt="">
+                <h1>Mr Vue lao</h1>
+            </div>
+            <div class="menu">
+               <ul>
+                <li><i class="fa-solid fa-house"></i><a href="#">Home</a></li>
+                <li class="aboutme"><i class="fa-solid fa-user"></i><a href="#">About Me</a>
+                    <div class="about">
+                        <a href="#" id="skills">Skills</a>
+                        <a href="#">Mission</a>
+                        <a href="#">Version</a>
+                        <a href="#">Team</a>
+                    </div>
+                </li>
+                <li><i class="fa-solid fa-circle-user"></i><a href="profile.html">Profile</a></li>
+                <li><i class="fa-solid fa-layer-group"></i><a href="#" id="Sv">Services</a></li>
+                <li><i class="fa-solid fa-book"></i><a href="training.html">Traning</a></li>
+                <li  class="contactme"><i class="fa-solid fa-phone"></i><a href="#">Contact me</a>
+                    <div class="contact hide">
+                        <a href="https://www.facebook.com/share/1ByR2aSWtU/">Facebook</a>
+                        <a href="#" onclick="goWhatsapp()">Whatsapp</a>
+                        <a href="#" onclick="alert('ສະບາຍດີລູກຄ້າທີນ່າຮັກ ນີ້ແມ່ນເບີໂທເດີ້ +856 2097848290')">Phone Number</a>
+                    </div>
+                </li>
+               </ul>
+
+                <div class="hamberger-icon" id="hamIcon" onclick="myFunction(this)">
+                   <div class="bar-1"></div>
+                   <div class="bar-2"></div>
+                   <div class="bar-3"></div>
+               </div>
+            </div>
+        </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><i class="fa-solid fa-house"></i><a href="index.html">Home</a></li>
+                <li><i class="fa-solid fa-user"></i><a href="index.html">About</a></li>
+                <li><i class="fa-solid fa-circle-user"></i><a href="profile.html">Profile</a></li>
+                <li><i class="fa-solid fa-layer-group"></i><a href="#">Service</a></li>
+                <li><i class="fa-solid fa-book"></i><a href="training.html">Trainning</a></li>
+                <li><i class="fa-solid fa-phone"></i><a href="#">contact me</a></li>
+            </ul>
+        </div>
+    </header>
+<!-- profile -->
+
+<div class="profile">
+     <div class="profile-container">
+        <div class="photos">
+            <img src="images/images 6.jpeg">
+        </div>
+        <div class="information">
+            <form>
+            <h1> Hi, I'm <span id="Type"></span></h1>
+            <p>Lorem ipsum dolor sit amet, lorem veniam unde natus quo. Delectus voluptatem assumenda, architecto consequuntur pariatur sed aperiam reprehenderit, commodi repellendus veniam quo quia fugit aliquam quae!</p>
+            <div class="info-icon">
+                <a href="https://www.facebook.com/share/1ByR2aSWtU/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" onclick="goWhatsapp()"><i class="fa-brands fa-square-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.tiktok.com/@mr_vue_lao?_r=1&_t=ZS-93rNzAFmFes"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://github.com/mrvuelao-bot"> <i class="fa-brands fa-square-github"></i></a>
+                <a href="#"> <i class="fa-brands fa-square-twitter"></i></a>
+            </div>
+            </form>
+        </div>
+     </div>
+</div>
+
+<!-- profile -->
+
+<main>
+    <div class="container1">
+        <div class="img-con">
+            <div class="img-item">
+                <img onclick="openModel();currentSlide(1)" src="images/images 3.jpeg" alt="">
+            </div>
+            <div class="img-item">
+                <img onclick="openModel();currentSlide(2)" src="images/images 8.jpeg" alt="">
+            </div>
+            <div class="img-item">
+                <img onclick="openModel();currentSlide(3)" src="images/iamges 4.jpeg" alt="">
+            </div>
+            <div class="img-item">
+                <img onclick="openModel();currentSlide(4)" src="images/imagse 7.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="img-item">
+        <img src="images/images 7.jpeg" alt="">
+    </div>
+
+    <!--model/ligth-box-->
+    <div id="myModel" class="model">
+         <span onclick="closeModel()" class="close">&times;</span>
+         <div class="model-content">
+            <div class="myslides">
+                <img src="images/images 3.jpeg" alt="">
+            </div>
+            <div class="myslides">
+                <img src="images/images 8.jpeg" alt="">
+            </div>
+            <div class="myslides">
+                <img src="images/iamges 4.jpeg" alt="">
+            </div>
+            <div class="myslides">
+                <img src="images/imagse 7.jpeg" alt="">
+            </div>
+         </div>
+
+         <!--next/previous control-->
+         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+         <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="img-thb-con">
+         <!---Thumbnail image conttrol-->
+            <div class="img-thb">
+                <img class="demo" onclick="currentSlide(1)" src="images/images 3.jpeg" alt="">
+            </div>
+            <div class="img-thb">
+                <img class="demo" onclick="currentSlide(2)" src="images/images 8.jpeg" alt="">
+            </div>
+            <div class="img-thb">
+                <img class="demo" onclick="currentSlide(3)"  src="images/iamges 4.jpeg" alt="">
+            </div>
+            <div class="img-thb">
+                <img class="demo" onclick="currentSlide(4)" src="images/imagse 7.jpeg">
+            </div>
+         </div>
+    </div>
+</main>
+
+
+<div class="button">
+    <div class="button-box">
+        <button type="submit" class="btn btn-primary btn-ghost">Like</button>
+        <button type="submit" class="btn btn-primary btn-ghost">Follow</button>
+        <button type="submit" class="btn btn-primary btn-ghost">Subscribe</button>
+    </div>
+</div>
+
+ <div id="skill" class="container">
+        <div class="main-title">
+            <h1>My <strong>skills</strong></h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam quasi nostrum est sequi porro accusantium, magnam nemo corporis, saepe, animi impedit temporibus modi ipsum vero!</p>
+        </div>
+    </div>
+
+<div class="row">
+    <section class="col">
+        <div class="sub-title">
+            <h2>Programming Skills</h2>
+        </div>
+
+        <div class="skills-container">
+            <div class="skill">
+                <div class="subject">HTML</div>
+                <div class="progress-bar" value="85%">
+                    <div class="progress-line" style="max-width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="subject">CSS</div>
+                <div class="progress-bar" value="75%">
+                    <div class="progress-line" style="max-width: 75%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="subject">JavaScript</div>
+                <div class="progress-bar" value="45%">
+                    <div class="progress-line" style="max-width: 45%;"></div>
+                </div>
+            </div>
+    </section>
+    <section class="col">
+        <div class="sub-title">
+            <h2>Designing Skills</h2>
+        </div>
+
+        <div class="skills-container">
+            <div class="skill">
+                <div class="subject">PhotoShop</div>
+                <div class="progress-bar" value="55%">
+                    <div class="progress-line" style="max-width: 55%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="subject">canva</div>
+                <div class="progress-bar" value="85%">
+                    <div class="progress-line" style="max-width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="subject">Figma</div>
+                <div class="progress-bar" value="60%">
+                    <div class="progress-line" style="max-width: 60%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="subject">Responsive Design</div>
+                <div class="progress-bar" value="92%">
+                    <div class="progress-line" style="max-width: 92%;"></div>
+                </div>
+            </div>
+    </section>
+</div>
+
+
+
+
+    <!-- Services -->
+
+    <div id="service" class="services">
+        <h1>My services</h1>
+        <div class="service-container">
+            <div class="services-box">
+               <i class="fa-solid fa-laptop-code"></i>
+                <h3>Web Design</h3>
+                <br>
+                <p>Responsive webdesigning as professional</p>
+            </div>
+            <div class="services-box">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Marketing</h3>
+                <br>
+                <p>Digital Marketing Strategy consultant</p>
+            </div>
+            <div class="services-box">
+                <i class="fa-solid fa-palette"></i>
+                <h3>Graphic Design</h3>
+                <br>
+                <p>PS & Canva Experience 1year</p>
+            </div>
+            <div class="services-box">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <h3>Software Debugger</h3>
+                <br>
+                <p>Freelance Software Bug Fixing Specialist</p>
+            </div>
+        </div>
+    </div>
+
+
+<script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
